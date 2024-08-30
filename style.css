@@ -1,23 +1,48 @@
 body {
   font-family: "Futura", "Trebuchet MS", "Arial", sans-serif;
-  background-color: #111111;
-  color: white;
+  background-color: black;
+  color: #f5830a;
   margin: 0;
   padding: 0;
 }
 
-header {
+.header {
+  display: flex;
   position: relative;
   width: 100%;
   height: 100px;
-  background-color: #333;
+  background-color: #0b3d5b;
+  justify-content: center;
+  align-items: center;
+  /* border: blue 1px solid; */
 }
 
 .navbar {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
+  display: flex;
+  flex: 1;
+  justify-content: right;
+  /* border: blue 1px solid; */
+}
+
+.left-header {
+  flex: 1;
+  font-size: 18px;
+  margin-left: 1rem;
+  /* border: blue 1px solid; */
+}
+
+.middle-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  font-size: 29px;
+  /* border: blue 1px solid; */
+}
+
+.flex-1 {
+  flex: 1;
+  /* border: blue 1px solid; */
 }
 
 .navbar ul {
@@ -32,76 +57,203 @@ header {
 }
 
 .navbar ul li a {
-  color: white;
+  color: #f5830a;
   font-size: 24px; /* Justera storleken på ikonerna */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-  color: #00bfff; /* Färg vid hovring */
+  color: #419ed7; /* Färg vid hovring */
+}
+
+.content {
+  background-color: #0b3d5b;
+}
+
+.presentation {
+  display: flex;
+  color: #f5830a;
+  background-color: #0b3d5b;
+  margin: 1rem;
+  border: #0b3d5b 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.presentation-content {
+  flex: 1;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 999;
+}
+
+#overlay.active {
+  display: block;
+}
+
+.image-form {
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.presentation-image {
+  width: 50%; /* Tar upp 50% av bredden */
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.image {
+  width: 50%; /* Tar upp 50% av bredden */
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+  display: flex;
+  flex: 1;
+}
+
+.form-box {
+  width: 60%; /* Tar upp 50% av bredden */
+  height: auto;
+  border-radius: 5px;
 }
 
 .contact-form {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: #333;
-  padding: 15px;
-  border-radius: 5px;
+  width: 50%; /* Tar upp 45% av bredden */
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   justify-content: center;
-  display: none;
-  width: 300px;
-  z-index: 1000;
+  background-color: #1b1b1b; /* Lägg till en bakgrundsfärg för att matcha resten av sidan */
+  padding: 1rem;
+  border-radius: 5px;
 }
-/* 
+
 .contact-form label {
-  display: block;
-  margin-bottom: 5px;
-} */
+  align-self: flex-start; /* Justera textetiketterna till vänster */
+  margin-bottom: 0.5rem;
+}
 
 .contact-form input,
 .contact-form textarea {
-  width: 80%;
-  padding: 8px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  width: 100%; /* Full bredd av formulärets container */
+  padding: 10px;
+  margin-bottom: 1rem;
   border: none;
   border-radius: 3px;
+  background-color: #0b3d5b;
+  color: #f5830a; /* Textfärg */
 }
 
 .contact-form button {
-  background-color: #00bfff;
-  width: 60%;
-  color: white;
+  background-color: #419ed7;
+  color: #f5830a;
   border: none;
   padding: 10px;
   border-radius: 3px;
   cursor: pointer;
+  align-self: center; /* Centrera knappen i förhållande till formuläret */
 }
 
 .contact-form button:hover {
-  background-color: #009acd;
+  background-color: #3a8db8;
 }
 
+form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .container {
   padding: 88px 1rem 1.5rem;
   height: 100%;
+}
+
+.grid-item {
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+  border: #0b3d5b 1px solid;
+  border-radius: 5px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr; /* En kolumn som standard */
   gap: 2rem;
+  margin: 1rem;
+}
+
+.carousel {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1200px;
+}
+
+.slick-prev,
+.slick-next {
+  color: #f5830a; /* Set the color of the arrows */
+  font-size: 2rem; /* Adjust the size of the arrows */
+  z-index: 1000; /* Ensure arrows are above other content */
+  opacity: 1; /* Make sure the arrows are fully visible */
+}
+
+.slick-prev {
+  left: 10px; /* Positioning of the left arrow */
+}
+
+.slick-next {
+  right: 10px; /* Positioning of the right arrow */
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #419ed7; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge the arrow on hover */
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+  opacity: 0.3; /* Make disabled arrows less visible */
+}
+
+.header-in-carousel {
+  color: #f5830a;
+  background-color: #0b3d5b;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: #0b3d5b 1px solid;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Två kolumner vid bredare skärmar */
+    grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.image-form {
+  flex-direction: column; /* Staplar bild och formulär ovanpå varandra på mindre skärmar */
+  align-items: center; /* Centrerar bild och formulär */
+}
+
+.presentation-image,
+.contact-form {
+  width: 100%; /* Tar upp full bredd på mindre skärmar */
 }
 
 .grid-item a {
@@ -157,4 +309,37 @@ header {
 .footer {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid #f5830a;
+  background-color: #0b3d5b;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #f5830a;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #f5830a;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #419ed7;
 }

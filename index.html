@@ -7,23 +7,50 @@
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script defer src="main.js"></script>
     <script defer src="main.js"></script>
   </head>
   <body>
     <!-- HEADER -->
-    <header>
+    <header class="header">
+      <div class="left-header">Logga in</div>
+      <div class="middle-header">WORLD OF LUNA</div>
       <div class="navbar">
-        <ul>
+        <ul class="icons">
           <li>
             <a href="#"><i class="fas fa-home"></i></a>
           </li>
           <li>
             <a href="#"><i class="fas fa-user"></i></a>
-          </li>
-          <li>
-            <a href="#" id="contactIcon"><i class="fas fa-envelope"></i></a>
           </li>
           <li>
             <a href="#"><i class="fas fa-cog"></i></a>
@@ -32,25 +59,54 @@
       </div>
     </header>
 
-    <!-- CONTACT FORM -->
-    <div id="contactForm" class="contact-form">
-      <form class="form-box">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
+    <!-- PRESENTATIONSTEXT -->
+    <section class="presentation">
+      <div class="presentation-content">
+        <div class="presentation-text">
+          <h1>Welcome to Our Math Game</h1>
+          <p>
+            Discover a world of learning and play in our latest mathematical
+            adventure! This game is designed to make math fun and engaging for
+            children of all ages. Here, you can improve your math skills while
+            having a great time. Our various levels and challenges will help you
+            develop logical thinking and problem-solving abilities.
+          </p>
+          <p>
+            Whether you want to learn basic math or challenge yourself with more
+            difficult problems, we have something for everyone. Play and learn
+            in a way that is both entertaining and educational!
+          </p>
+        </div>
+      </div>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" />
+      <!-- <div class="image-form"> -->
+      <!-- <div class="presentation-image">
+          <img class="image"
+            src="https://www.datocms-assets.com/49940/1707744137-jaramba-card-cover.webp?fm=webp"
+            alt="Matematiskt Spel"
+          />
+        </div> -->
+      <!-- CONTACT FORM -->
+      <div id="contactForm" class="contact-form">
+        <form class="form-box">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
 
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
 
-        <button type="submit">Send</button>
-      </form>
-    </div>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit">Send</button>
+        </form>
+      </div>
+      <!-- </div> -->
+    </section>
 
     <!-- MAIN -->
-
-    <div class="grid">
+    <div class="header-in-carousel">3 - 6 YEARS OLD</div>
+    <div class="carousel">
       <div class="grid-item">
         <a href="/play-and-learn">
           <div class="item">
@@ -61,7 +117,6 @@
               />
             </div>
             <div class="content">
-              <p class="date">ananas</p>
               <h2 class="title">PLAY AND LEARN</h2>
             </div>
           </div>
@@ -77,26 +132,21 @@
               />
             </div>
             <div class="content">
-              <p class="date">ananas</p>
               <h2 class="title">MATHEMATICS</h2>
             </div>
           </div>
         </a>
       </div>
-    </div>
-
-    <div class="grid">
       <div class="grid-item">
         <a href="/play-and-learn">
           <div class="item">
             <div class="image-wrapper">
               <img
                 src="https://www.datocms-assets.com/49940/1711112445-ho_card.webp?fm=webp"
-                alt="PLAY AND LEARN"
+                alt="ENGLISH"
               />
             </div>
             <div class="content">
-              <p class="date">ananas</p>
               <h2 class="title">ENGLISH</h2>
             </div>
           </div>
@@ -108,19 +158,15 @@
             <div class="image-wrapper">
               <img
                 src="https://www.datocms-assets.com/49940/1707744597-jaramba-zigzag-3.webp?fm=webp"
-                alt="MATHEMATICS"
+                alt="SWEDISH"
               />
             </div>
             <div class="content">
-              <p class="date">ananas</p>
               <h2 class="title">SWEDISH</h2>
             </div>
           </div>
         </a>
       </div>
-    </div>
-
-    <div class="grid">
       <div class="grid-item">
         <a href="/play-and-learn">
           <div class="item">
@@ -131,7 +177,6 @@
               />
             </div>
             <div class="content">
-              <p class="date">ananas</p>
               <h2 class="title">MAZE</h2>
             </div>
           </div>
@@ -147,7 +192,6 @@
               />
             </div>
             <div class="content">
-              <p class="date">ananas</p>
               <h2 class="title">LANGUAGE</h2>
             </div>
           </div>
@@ -155,10 +199,228 @@
       </div>
     </div>
 
+    <div class="header-in-carousel">6 - 9 YEARS OLD</div>
+    <div class="carousel">
+      <div class="grid-item">
+        <a href="/play-and-learn">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1707744137-jaramba-card-cover.webp?fm=webp"
+                alt="PLAY AND LEARN"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">PLAY AND LEARN</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/mathStartPage">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1673608616-tv-ads_village-kopia.webp?fm=webp"
+                alt="MATHEMATICS"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">MATHEMATICS</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/play-and-learn">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1711112445-ho_card.webp?fm=webp"
+                alt="ENGLISH"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">ENGLISH</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/mathStartPage">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1707744597-jaramba-zigzag-3.webp?fm=webp"
+                alt="SWEDISH"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">SWEDISH</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/play-and-learn">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1711112420-group-320.webp?fm=webp"
+                alt="PLAY AND LEARN"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">MAZE</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/mathStartPage">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1707744597-jaramba-zigzag-3.webp?fm=webp"
+                alt="MATHEMATICS"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">LANGUAGE</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- <div class="grid"> -->
+    <!-- <div class="grid-item">
+        <a href="/play-and-learn">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1707744137-jaramba-card-cover.webp?fm=webp"
+                alt="PLAY AND LEARN"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">PLAY AND LEARN</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/mathStartPage">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1673608616-tv-ads_village-kopia.webp?fm=webp"
+                alt="MATHEMATICS"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">MATHEMATICS</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div> -->
+
+    <!-- <div class="grid">
+      <div class="grid-item">
+        <a href="/play-and-learn">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1711112445-ho_card.webp?fm=webp"
+                alt="PLAY AND LEARN"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">ENGLISH</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/mathStartPage">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1707744597-jaramba-zigzag-3.webp?fm=webp"
+                alt="MATHEMATICS"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">SWEDISH</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div> -->
+
+    <!-- <div class="grid">
+      <div class="grid-item">
+        <a href="/play-and-learn">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1711112420-group-320.webp?fm=webp"
+                alt="PLAY AND LEARN"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">MAZE</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="grid-item">
+        <a href="/mathStartPage">
+          <div class="item">
+            <div class="image-wrapper">
+              <img
+                src="https://www.datocms-assets.com/49940/1707744597-jaramba-zigzag-3.webp?fm=webp"
+                alt="MATHEMATICS"
+              />
+            </div>
+            <div class="content">
+              <h2 class="title">LANGUAGE</h2>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div> -->
+
     <!-- FOOTER -->
     <footer>
       <div class="footer">
-        <p>© 2021 All rights reserved</p>
+        <div class="footer-content">
+          <p>© 2021 All rights reserved</p>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              aria-label="Twitter"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
