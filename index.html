@@ -37,27 +37,40 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
     <script defer src="main.js"></script>
-    <script defer src="main.js"></script>
   </head>
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="left-header">Logga in</div>
-      <div class="middle-header">WORLD OF LUNA</div>
+      <div class="left-header"></div>
+      <div class="middle-header">
+        <img class="logo-header" src="images/logo.png" alt="" />
+      </div>
       <div class="navbar">
-        <ul class="icons">
-          <li>
-            <a href="#"><i class="fas fa-home"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-user"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-cog"></i></a>
-          </li>
-        </ul>
+        <!-- Hamburger Menu Button -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
     </header>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <nav id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </nav>
+
+    <div class="under-header">
+      <div>Play Now</div>
+      <div>Leaderboard</div>
+      <div>Achievments</div>
+      <div>News</div>
+      <div>Community</div>
+      <div>Events</div>
+      <div>Tutorials</div>
+    </div>
 
     <!-- PRESENTATIONSTEXT -->
     <section class="presentation">
@@ -79,13 +92,6 @@
         </div>
       </div>
 
-      <!-- <div class="image-form"> -->
-      <!-- <div class="presentation-image">
-          <img class="image"
-            src="https://www.datocms-assets.com/49940/1707744137-jaramba-card-cover.webp?fm=webp"
-            alt="Matematiskt Spel"
-          />
-        </div> -->
       <!-- CONTACT FORM -->
       <div id="contactForm" class="contact-form">
         <form class="form-box">
@@ -101,7 +107,6 @@
           <button type="submit">Send</button>
         </form>
       </div>
-      <!-- </div> -->
     </section>
 
     <!-- MAIN -->

@@ -9,26 +9,56 @@ body {
 .header {
   display: flex;
   position: relative;
-  width: 100%;
-  height: 100px;
   background-color: #0b3d5b;
   justify-content: center;
   align-items: center;
-  /* border: blue 1px solid; */
+  padding: 0.5rem;
+}
+
+.hamburger-menu {
+  display: none; 
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.under-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f5830a;
+  padding: 10px 0;
+  margin-top: 1rem;
+  
+}
+
+.under-header div {
+  color: #0b3d5b;
+  font-size: 14px;
+  height: 20px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 3px 8px;
+  border-radius: 5px;
+}
+
+.under-header div:hover {
+  color: #ffffff;
+  background-color: #0b3d5b;
 }
 
 .navbar {
   display: flex;
   flex: 1;
   justify-content: right;
-  /* border: blue 1px solid; */
+  
 }
 
 .left-header {
   flex: 1;
   font-size: 18px;
   margin-left: 1rem;
-  /* border: blue 1px solid; */
+  
 }
 
 .middle-header {
@@ -36,13 +66,10 @@ body {
   justify-content: center;
   align-items: center;
   flex: 1;
-  font-size: 29px;
-  /* border: blue 1px solid; */
 }
 
 .flex-1 {
   flex: 1;
-  /* border: blue 1px solid; */
 }
 
 .navbar ul {
@@ -75,14 +102,22 @@ body {
   display: flex;
   color: #f5830a;
   background-color: #0b3d5b;
-  margin: 1rem;
+  margin: 3rem;
   border: #0b3d5b 1px solid;
   border-radius: 5px;
   padding: 5px;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 .presentation-content {
   flex: 1;
+}
+
+.presentation-text {
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 
 #overlay {
@@ -127,6 +162,7 @@ body {
   width: 60%; /* Tar upp 50% av bredden */
   height: auto;
   border-radius: 5px;
+  margin-left: 1rem;
 }
 
 .contact-form {
@@ -157,7 +193,8 @@ body {
 }
 
 .contact-form button {
-  background-color: #419ed7;
+  /* background-color: #419ed7; */
+  background-color: #0b3d5b;
   color: #f5830a;
   border: none;
   padding: 10px;
@@ -167,7 +204,7 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #3a8db8;
+  background-color: #419ed7;
 }
 
 form-box {
@@ -201,31 +238,9 @@ form-box {
   max-width: 1200px;
 }
 
-.slick-prev,
-.slick-next {
-  color: #f5830a; /* Set the color of the arrows */
-  font-size: 2rem; /* Adjust the size of the arrows */
-  z-index: 1000; /* Ensure arrows are above other content */
-  opacity: 1; /* Make sure the arrows are fully visible */
-}
-
-.slick-prev {
-  left: 10px; /* Positioning of the left arrow */
-}
-
-.slick-next {
-  right: 10px; /* Positioning of the right arrow */
-}
-
-.slick-prev:hover,
-.slick-next:hover {
-  color: #419ed7; /* Change color on hover */
-  transform: scale(1.2); /* Slightly enlarge the arrow on hover */
-}
-
-.slick-prev.slick-disabled,
-.slick-next.slick-disabled {
-  opacity: 0.3; /* Make disabled arrows less visible */
+.content:hover {
+  background-color: #f5830a;
+  color: #0b3d5b;
 }
 
 .header-in-carousel {
@@ -238,12 +253,6 @@ form-box {
   border: #0b3d5b 1px solid;
   border-radius: 5px;
   padding: 5px;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
 }
 
 .image-form {
@@ -342,4 +351,50 @@ form-box {
 
 .social-icons a:hover {
   color: #419ed7;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger menu on mobile */
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 80px; /* Adjust according to header height */
+    right: 0;
+    background-color: #f5830a;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000; /* Ensure it’s on top of other content */
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu ul li {
+    margin-bottom: 10px;
+  }
+
+  .mobile-menu ul li a {
+    color: #0b3d5b;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .mobile-menu ul li a:hover {
+    color: #ffffff;
+    background-color: #0b3d5b;
+    padding: 8px;
+    border-radius: 5px;
+  }
 }

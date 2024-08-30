@@ -66,3 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   });
 });
+
+function toggleMenu() {
+  const menu = document.getElementById("mobile-menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+
