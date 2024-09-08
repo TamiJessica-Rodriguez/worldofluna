@@ -133,13 +133,13 @@ body {
 }
 
 .form-box {
-  width: 60%; /* Tar upp 50% av bredden */
+  width: 60%; 
   height: auto;
   border-radius: 5px;
   margin-left: 1rem;
 }
 
-img{
+img {
   width: 90%;
 }
 
@@ -148,14 +148,27 @@ img{
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  background-color: #1b1b1b; /* Lägg till en bakgrundsfärg för att matcha resten av sidan */
-  /* padding: 1rem; */
+  background-color: #1b1b1b; 
   border-radius: 5px;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
 
 .contact-form label {
-  align-self: flex-start; /* Justera textetiketterna till vänster */
+  align-self: flex-start;
   margin-bottom: 0.5rem;
+}
+
+.header-in-carousel{
+  color: #f5830a;
+  background-color: #0b3d5b;
+  margin-left: 10rem;
+  margin-right: 10rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: #0b3d5b 1px solid;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .contact-form input,
